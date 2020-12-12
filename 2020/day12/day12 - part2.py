@@ -2,7 +2,7 @@ file = open("input.txt")
 lines = file.readlines()
 
 def rotate(value, hor, ver):
-    if value == 90:  return  ver,  -hor
+    if value == 90:  return  ver, -hor
     if value == 180: return -hor, -ver
     if value == 270: return -ver,  hor
     return hor, ver
