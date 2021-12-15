@@ -1,14 +1,12 @@
 file = open("input.txt")
 
 caves = {}
-def seek(start, visited):
-    if start == 'end': return 1
-    if len(caves[start]) == 1 and caves[start][0].lower() == caves[start][0]: return 0
-    if start in visited: return 0
-    if start.lower() == start: visited.append(start)
+def seek(node, visited = set()):
+    if node == 'end': return 1
     count = 0
-    for path in caves[start]:
-        count += seek(path, visited.copy())
+    for next in caves[node]:
+        if next in visited: continue
+        count += seek(next, visited | {node} if node == node.lower() else visited)
     return count
 
 
@@ -16,5 +14,5 @@ for line in file.readlines():
     s, e = line.replace("\n", "").split("-")
     caves.setdefault(s, []).append(e)
     caves.setdefault(e, []).append(s)
-    
-print(seek('start', []))
+
+print(seek('start'))
