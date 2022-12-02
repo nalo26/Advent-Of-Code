@@ -1,4 +1,4 @@
-# Year 2021
+# Year 2022
 
 Here are the folder for the whole 2022's problems.
 
@@ -9,7 +9,7 @@ Everyting is made with **Python 3**. A lot of programs need at least Python 3.6,
 | File               | Started            | Finished           |
 |--------------------|--------------------|--------------------|
 | `day1 - part1.py`  | :heavy_check_mark: | :heavy_check_mark: |
-| `day1 - part2.py`  | :hourglass: | :hourglass: |
+| `day1 - part2.py`  | :heavy_check_mark: | :heavy_check_mark: |
 | `day2 - part1.py`  | :hourglass: | :hourglass: |
 | `day2 - part2.py`  | :hourglass: | :hourglass: |
 | `day3 - part1.py`  | :hourglass: | :hourglass: |
