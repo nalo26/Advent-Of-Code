@@ -11,11 +11,11 @@ Everyting is made with **Python 3**. A lot of programs need at least Python 3.6,
 | `day1 - part1.py`  | :heavy_check_mark: | :heavy_check_mark: |
 | `day1 - part2.py`  | :heavy_check_mark: | :heavy_check_mark: |
 | `day2 - part1.py`  | :heavy_check_mark: | :heavy_check_mark: |
-| `day2 - part2.py`  | :hourglass: | :hourglass: |
-| `day3 - part1.py`  | :hourglass: | :hourglass: |
-| `day3 - part2.py`  | :hourglass: | :hourglass: |
-| `day4 - part1.py`  | :hourglass: | :hourglass: |
-| `day4 - part2.py`  | :hourglass: | :hourglass: |
+| `day2 - part2.py`  | :heavy_check_mark: | :heavy_check_mark: |
+| `day3 - part1.py`  | :heavy_check_mark: | :heavy_check_mark: |
+| `day3 - part2.py`  | :heavy_check_mark: | :heavy_check_mark: |
+| `day4 - part1.py`  | :heavy_check_mark: | :heavy_check_mark: |
+| `day4 - part2.py`  | :heavy_check_mark: | :heavy_check_mark: |
 | `day5 - part1.py`  | :hourglass: | :hourglass: |
 | `day5 - part2.py`  | :hourglass: | :hourglass: |
 | `day6 - part1.py`  | :hourglass: | :hourglass: |
