@@ -26,8 +26,8 @@ Everyting is made with **Python 3**. A lot of programs need at least Python 3.6,
 | `day8 - part2.py`  | :heavy_check_mark: | :heavy_check_mark: |
 | `day9 - part1.py`  | :heavy_check_mark: | :heavy_check_mark: |
 | `day9 - part2.py`  | :heavy_check_mark: | :heavy_check_mark: |
-| `day10 - part1.py` | :hourglass: | :hourglass: |
-| `day10 - part2.py` | :hourglass: | :hourglass: |
+| `day10 - part1.py` | :heavy_check_mark: | :heavy_check_mark: |
+| `day10 - part2.py` | :heavy_check_mark: | :heavy_check_mark: |
 | `day11 - part1.py` | :hourglass: | :hourglass: |
 | `day11 - part2.py` | :hourglass: | :hourglass: |
 | `day12 - part1.py` | :hourglass: | :hourglass: |
