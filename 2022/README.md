@@ -29,8 +29,8 @@ Then, you need to manually find the repeating pattern, and fill it in the line 2
 | Day 16 | :heavy_check_mark: | :heavy_check_mark: |
 | Day 17 | :heavy_check_mark: | :heavy_check_mark: |
 | Day 18 | :heavy_check_mark: | :heavy_check_mark: |
-| Day 19 | :hourglass: | :hourglass: |
-| Day 20 | :hourglass: | :hourglass: |
+| Day 19 | :x: | :x: |
+| Day 20 | :heavy_check_mark: | :heavy_check_mark: |
 | Day 21 | :hourglass: | :hourglass: |
 | Day 22 | :hourglass: | :hourglass: |
 | Day 23 | :hourglass: | :hourglass: |
