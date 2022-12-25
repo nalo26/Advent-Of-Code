@@ -10,7 +10,7 @@ Then, you need to manually find the repeating pattern, and fill it in the line 2
 ## Supported problems
 
 | Day    | Part 1             | Part 2             |
-|--------|--------------------|--------------------|
+| ------ | ------------------ | ------------------ |
 | Day 1  | :heavy_check_mark: | :heavy_check_mark: |
 | Day 2  | :heavy_check_mark: | :heavy_check_mark: |
 | Day 3  | :heavy_check_mark: | :heavy_check_mark: |
@@ -25,14 +25,14 @@ Then, you need to manually find the repeating pattern, and fill it in the line 2
 | Day 12 | :heavy_check_mark: | :heavy_check_mark: |
 | Day 13 | :heavy_check_mark: | :heavy_check_mark: |
 | Day 14 | :heavy_check_mark: | :heavy_check_mark: |
-| Day 15 | :heavy_check_mark: | :x: |
+| Day 15 | :heavy_check_mark: | :x:                |
 | Day 16 | :heavy_check_mark: | :heavy_check_mark: |
 | Day 17 | :heavy_check_mark: | :heavy_check_mark: |
 | Day 18 | :heavy_check_mark: | :heavy_check_mark: |
-| Day 19 | :x: | :x: |
+| Day 19 | :x:                | :x:                |
 | Day 20 | :heavy_check_mark: | :heavy_check_mark: |
 | Day 21 | :heavy_check_mark: | :heavy_check_mark: |
-| Day 22 | :heavy_check_mark: | :x: |
+| Day 22 | :heavy_check_mark: | :x:                |
 | Day 23 | :heavy_check_mark: | :heavy_check_mark: |
-| Day 24 | :hourglass: | :hourglass: |
-| Day 25 | :hourglass: | :hourglass: |
+| Day 24 | :heavy_check_mark: | :heavy_check_mark: |
+| Day 25 | :hourglass:        | :hourglass:        |
