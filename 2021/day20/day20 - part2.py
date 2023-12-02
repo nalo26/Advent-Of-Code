@@ -4,11 +4,21 @@ lines = file.readlines()
 ALGORITHM = lines[0][:-1]
 picture = lines[2:]
 
-NEIGHBOORS = [(-1, -1),(0, -1),(1, -1),(-1, 0),(0, 0),(1, 0),(-1, 1),(0, 1),(1, 1)]
+NEIGHBOORS = [
+    (-1, -1),
+    (0, -1),
+    (1, -1),
+    (-1, 0),
+    (0, 0),
+    (1, 0),
+    (-1, 1),
+    (0, 1),
+    (1, 1),
+]
 
 
 def draw_border(picture, border_width, char):
-    border = char*border_width
+    border = char * border_width
     for i, line in enumerate(picture):
         picture[i] = border + line.replace("\n", "") + border
 
@@ -19,7 +29,7 @@ def draw_border(picture, border_width, char):
     return picture
 
 
-def process(picture, void_char='.'):
+def process(picture, void_char="."):
     picture = draw_border(picture, 2, void_char)
     res = []
     for row in range(1, len(picture) - 1):
@@ -36,7 +46,7 @@ def process(picture, void_char='.'):
 
 
 for i in range(50):
-    picture = process(picture, ALGORITHM[-1] if i%2==0 else ALGORITHM[0])
+    picture = process(picture, ALGORITHM[-1] if i % 2 == 0 else ALGORITHM[0])
 
 res = 0
 for row in picture:

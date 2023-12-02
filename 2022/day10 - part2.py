@@ -7,7 +7,7 @@ def incrementCycle(cycle, x, row):
     cycle += 1
     if cycle != 1 and cycle % 40 == 1:
         row += 1
-    lit = cycle % 40 in range(x, x+3)
+    lit = cycle % 40 in range(x, x + 3)
     return cycle, row, "#" if lit else "."
 
 

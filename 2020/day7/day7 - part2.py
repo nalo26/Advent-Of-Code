@@ -1,5 +1,6 @@
 file = open("./input.txt")
 
+
 class Bag:
     def __init__(self, name):
         self.name = name
@@ -9,10 +10,13 @@ class Bag:
 bags = []
 myBag = "shiny gold"
 
+
 def getBag(name):
     for bag in bags:
-        if name == bag.name: return bag
+        if name == bag.name:
+            return bag
     return None
+
 
 def getContainingAmount(bag):
     res = 0
@@ -20,7 +24,7 @@ def getContainingAmount(bag):
         b = getBag(bagName)
         res += bag.contains[bagName]
         res += bag.contains[bagName] * getContainingAmount(b)
-    return res 
+    return res
 
 
 entry = None
@@ -29,7 +33,8 @@ for line in file.readlines():
     name = " ".join(name.split(" ")[:2])
     newBag = Bag(name)
     bags.append(newBag)
-    if name == myBag: entry = newBag
+    if name == myBag:
+        entry = newBag
 
     if not "no " in content:
         content = content.split(", ")

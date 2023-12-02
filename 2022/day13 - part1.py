@@ -9,7 +9,7 @@ def compute_order(left, right):
         return compute_order([left], right)
     if isinstance(left, list) and isinstance(right, int):
         return compute_order(left, [right])
-    
+
     # both list
     for l, r in zip(left, right):
         r = compute_order(l, r)

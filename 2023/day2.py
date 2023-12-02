@@ -1,6 +1,6 @@
+import operator
 from collections import defaultdict
 from functools import reduce
-import operator
 
 file = open("input.txt")
 lines = file.readlines()

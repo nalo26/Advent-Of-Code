@@ -27,7 +27,7 @@
 #     model = list(map(int, str(model_number)))
 #     for instruction in program:
 #         exec(instruction)
-#     if z == 0: 
+#     if z == 0:
 #         print(model_number)
 #         break
 
@@ -70,7 +70,7 @@
 # input[5] = input[4] - 0 + 6   (+6)
 # input[6] = input[1] - 6 + 14  (+8)
 # input[8] = input[7] - 3 + 3   (-0)
-# input[11] = input[10] - 2 + 4 (+2) 
+# input[11] = input[10] - 2 + 4 (+2)
 # input[12] = input[9] - 9 + 14 (+5)
 # input[13] = input[0] - 2 + 6  (+4)
 

@@ -1,6 +1,5 @@
 from tqdm import tqdm
 
-
 file = open("input.txt")
 pattern = file.read().splitlines()[0]
 

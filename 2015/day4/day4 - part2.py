@@ -6,7 +6,8 @@ answer = 0
 while True:
     to_code = key + str(answer)
     hash = md5(to_code.encode()).hexdigest()
-    if hash.startswith("000000"): break
+    if hash.startswith("000000"):
+        break
     answer += 1
 
 print(answer)

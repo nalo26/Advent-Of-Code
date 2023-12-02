@@ -34,9 +34,9 @@ nodes = []
 nodes_by_coords = {}
 start_coord = None
 stop_coord = None
-for z in range(min_z-1, max_z + 2):
-    for y in range(min_y-1, max_y + 2):
-        for x in range(min_x-1, max_x + 2):
+for z in range(min_z - 1, max_z + 2):
+    for y in range(min_y - 1, max_y + 2):
+        for x in range(min_x - 1, max_x + 2):
             if (x, y, z) in coords:
                 continue
 
@@ -69,7 +69,7 @@ def bfs(start: Node):
                 queue.append(edge.stop)
 
 
-bfs(nodes_by_coords.get((min_x-1, min_y-1, min_z-1)))
+bfs(nodes_by_coords.get((min_x - 1, min_y - 1, min_z - 1)))
 
 count = 0
 for coord in coords:

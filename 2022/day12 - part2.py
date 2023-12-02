@@ -24,8 +24,8 @@ start_coord = None
 for y, line in enumerate(lines):
     for x, c in enumerate(line):
         if c == "a":
-            stop_coords.add((x, y)) 
-        if c == "E": 
+            stop_coords.add((x, y))
+        if c == "E":
             start_coord = (x, y)
             c = "z"
         node = Node(c)
@@ -39,7 +39,7 @@ for y, line in enumerate(lines):
                 edge_to = Edge(node, neigh, 1)
                 node.out_edges.append(edge_to)
                 neigh.in_edges.append(edge_to)
-            
+
             if value <= 1:
                 edge_from = Edge(neigh, node, 1)
                 node.in_edges.append(edge_from)
@@ -62,6 +62,7 @@ def dijkstra(start):
                 dist[edge.stop] = dist[node] + edge.value
                 queue.append(edge.stop)
     return dist
+
 
 dij = dijkstra(start)
 print(min(dij.get(nodes_by_coords.get(coord)) for coord in stop_coords))

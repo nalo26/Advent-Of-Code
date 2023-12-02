@@ -15,6 +15,6 @@ for _ in range(10):
         newTemplate += poly
     template = newTemplate
 
-most_common = template.count(max(set(template), key = template.count))
-least_common = template.count(min(set(template), key = template.count))
+most_common = template.count(max(set(template), key=template.count))
+least_common = template.count(min(set(template), key=template.count))
 print(most_common - least_common)

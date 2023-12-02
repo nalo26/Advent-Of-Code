@@ -1,6 +1,5 @@
 from typing import MutableMapping
 
-
 file = open("input.txt")
 fuels = list(map(int, file.readline().split(",")))
 

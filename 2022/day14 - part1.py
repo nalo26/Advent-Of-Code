@@ -18,19 +18,18 @@ def can_fall(start, walls, lowest):
             return True
 
 
-
 walls = set()
 ys = set()
 for line in lines:
     points = line.split(" -> ")
     for i, point in enumerate(points[:-1]):
         x1, y1 = tuple(map(int, point.split(",")))
-        x2, y2 = tuple(map(int, points[i+1].split(",")))
+        x2, y2 = tuple(map(int, points[i + 1].split(",")))
         ys |= {y1, y2}
         if x1 == x2:
-            walls |= {(x1, y) for y in range(min(y1,y2), max(y1,y2)+1)}
+            walls |= {(x1, y) for y in range(min(y1, y2), max(y1, y2) + 1)}
         else:
-            walls |= {(x, y1) for x in range(min(x1,x2), max(x1,x2)+1)}
+            walls |= {(x, y1) for x in range(min(x1, x2), max(x1, x2) + 1)}
 
 start = (500, 0)
 count = 0

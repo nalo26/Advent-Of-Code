@@ -5,6 +5,7 @@ file = open("input.txt")
 lines = file.read().splitlines()
 valves = {}
 
+
 @cache
 def compute(opened, minutes, current):
     if minutes <= 0:
@@ -23,12 +24,14 @@ def compute(opened, minutes, current):
 
         for neigh in curr.get("neighs"):
             best = max(best, nsum + compute(frozenset(opened), minutes - 1, neigh))
-        
+
     return best
 
 
 for line in lines:
-    match = re.search("Valve (.*) has flow rate=(.*); tunnels? leads? to valves? (.*)", line)
+    match = re.search(
+        "Valve (.*) has flow rate=(.*); tunnels? leads? to valves? (.*)", line
+    )
     name, rate, neighs = match.groups()
     rate = int(rate)
     neighs = neighs.split(", ")

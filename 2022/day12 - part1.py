@@ -23,10 +23,10 @@ start_coord = None
 stop_coord = None
 for y, line in enumerate(lines):
     for x, c in enumerate(line):
-        if c == "S": 
+        if c == "S":
             start_coord = (x, y)
             c = "a"
-        if c == "E": 
+        if c == "E":
             stop_coord = (x, y)
             c = "z"
         node = Node(c)
@@ -40,7 +40,7 @@ for y, line in enumerate(lines):
                 edge_from = Edge(neigh, node, 1)
                 node.in_edges.append(edge_from)
                 neigh.out_edges.append(edge_from)
-            
+
             if value <= 1:
                 edge_to = Edge(node, neigh, 1)
                 node.out_edges.append(edge_to)

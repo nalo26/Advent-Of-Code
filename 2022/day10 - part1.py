@@ -2,7 +2,7 @@ file = open("input.txt")
 
 lines = file.read().splitlines()
 
-signals = [40*i+20 for i in range(6)]
+signals = [40 * i + 20 for i in range(6)]
 
 
 def incrementCycle(cycle, x):
@@ -25,4 +25,4 @@ for i, line in enumerate(lines, 1):
     if flag is not None:
         flags.append(flag)
 
-print(sum(signals[i]*flags[i] for i in range(len(signals))))
+print(sum(signals[i] * flags[i] for i in range(len(signals))))

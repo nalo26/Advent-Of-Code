@@ -1,7 +1,6 @@
 import re
 from functools import cache
 
-
 file = open("input.txt")
 lines = file.read().splitlines()
 valves = {}
@@ -25,8 +24,9 @@ def compute1(opened, minutes, current):
 
         for neigh in curr.get("neighs"):
             best = max(best, nsum + compute1(frozenset(opened), minutes - 1, neigh))
-        
+
     return best
+
 
 @cache
 def compute2(opened, minutes, current):
@@ -46,12 +46,14 @@ def compute2(opened, minutes, current):
 
         for neigh in curr.get("neighs"):
             best = max(best, nsum + compute2(frozenset(opened), minutes - 1, neigh))
-        
+
     return best
 
 
 for line in lines:
-    match = re.search("Valve (.*) has flow rate=(.*); tunnels? leads? to valves? (.*)", line)
+    match = re.search(
+        "Valve (.*) has flow rate=(.*); tunnels? leads? to valves? (.*)", line
+    )
     name, rate, neighs = match.groups()
     rate = int(rate)
     neighs = neighs.split(", ")

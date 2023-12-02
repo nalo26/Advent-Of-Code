@@ -13,13 +13,13 @@ def getLineScore(line, v):
 
 
 def getScenicScore(x, y, v, grid):
-    if x in (0, len(grid[0])-1) or y in (0, len(grid)-1):
+    if x in (0, len(grid[0]) - 1) or y in (0, len(grid) - 1):
         return 0
-    
+
     up = getLineScore([l[x] for l in grid[:y]][::-1], v)
     left = getLineScore(grid[y][:x][::-1], v)
-    down = getLineScore([l[x] for l in grid[y+1:]], v)
-    right = getLineScore(grid[y][x+1:], v)
+    down = getLineScore([l[x] for l in grid[y + 1 :]], v)
+    right = getLineScore(grid[y][x + 1 :], v)
 
     return up * left * down * right
 

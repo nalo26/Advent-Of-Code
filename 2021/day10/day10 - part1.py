@@ -7,7 +7,7 @@ SCORES = {")": 3, "]": 57, "}": 1197, ">": 25137}
 score = 0
 for line in file.readlines():
     stack = []
-    for char in line.replace("\n",""):
+    for char in line.replace("\n", ""):
         if char in OPENING:
             stack.append(char)
             continue
@@ -17,5 +17,5 @@ for line in file.readlines():
             score += SCORES[char]
             break
         stack.pop(-1)
-    
+
 print(score)

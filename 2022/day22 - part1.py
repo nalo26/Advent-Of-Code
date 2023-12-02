@@ -1,6 +1,5 @@
 import re
 
-
 file = open("input.txt")
 lines = file.read().splitlines()
 

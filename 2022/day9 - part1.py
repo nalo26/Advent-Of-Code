@@ -14,7 +14,7 @@ def calculate_tail(t, h, m):
     if yd == 2 and t[0] == h[0]:
         return [t[0], t[1] + m[1]]
 
-    return [h[0] + m[0]*-1, h[1] + m[1]*-1]
+    return [h[0] + m[0] * -1, h[1] + m[1] * -1]
 
 
 head = [0, 0]
@@ -27,10 +27,14 @@ for line in lines:
     step = int(step)
 
     match side:
-        case 'R': move = (1, 0)
-        case 'U': move = (0, 1)
-        case 'L': move = (-1, 0)
-        case 'D': move = (0, -1)
+        case "R":
+            move = (1, 0)
+        case "U":
+            move = (0, 1)
+        case "L":
+            move = (-1, 0)
+        case "D":
+            move = (0, -1)
 
     for _ in range(step):
         head[0] += move[0]

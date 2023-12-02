@@ -3,6 +3,7 @@ from ast import literal_eval
 file = open("input.txt")
 lines = file.readlines()
 
+
 class Num:
     def __init__(self, value):
         self.value = value
@@ -17,6 +18,7 @@ class Num:
 
     def __repr__(self):
         return str(self.value)
+
 
 class Pair:
     def __init__(self, left, right):
@@ -56,23 +58,33 @@ class Pair:
 
 
 def convert(l):
-    if isinstance(l, int): return Num(l)
+    if isinstance(l, int):
+        return Num(l)
     return Pair(convert(l[0]), convert(l[1]))
 
-def explode(v, k, depth = 0):
-    if isinstance(k, Num): return False
+
+def explode(v, k, depth=0):
+    if isinstance(k, Num):
+        return False
     if isinstance(k.left, Num) and isinstance(k.right, Num) and depth >= 4:
-        if k.left.left_val: k.left.left_val.value += k.left.value
-        if k.right.right_val: k.right.right_val.value += k.right.value
-        if k.side == 0: k.parent.set_left(Num(0))
-        else: k.parent.set_right(Num(0))
+        if k.left.left_val:
+            k.left.left_val.value += k.left.value
+        if k.right.right_val:
+            k.right.right_val.value += k.right.value
+        if k.side == 0:
+            k.parent.set_left(Num(0))
+        else:
+            k.parent.set_right(Num(0))
         v.update_value()
         return True
-    return explode(v, k.left, depth+1) or explode(v, k.right, depth+1)
+    return explode(v, k.left, depth + 1) or explode(v, k.right, depth + 1)
+
 
 def split(v, k):
-    if not isinstance(k, Num): return split(v, k.left) or split(v, k.right)
-    if k.value < 10: return False
+    if not isinstance(k, Num):
+        return split(v, k.left) or split(v, k.right)
+    if k.value < 10:
+        return False
 
     if k.side == 0:
         k.parent.set_left(Pair(Num(k.value // 2), Num(-(-k.value // 2))))
@@ -81,19 +93,28 @@ def split(v, k):
     v.update_value()
     return True
 
+
 def reduce(l):
     while True:
-        if explode(l, l): pass
-        elif split(l, l): pass
-        else: break
+        if explode(l, l):
+            pass
+        elif split(l, l):
+            pass
+        else:
+            break
+
 
 def magnitude(l):
-    if isinstance(l, Num): return l.value
+    if isinstance(l, Num):
+        return l.value
     return 3 * magnitude(l.left) + 2 * magnitude(l.right)
 
+
 def copy(l):
-    if isinstance(l, Num): return Num(l.value)
+    if isinstance(l, Num):
+        return Num(l.value)
     return Pair(copy(l.left), copy(l.right))
+
 
 numbers = []
 for line in lines:
@@ -103,7 +124,8 @@ for line in lines:
 results = []
 for i in range(len(numbers)):
     for j in range(len(numbers)):
-        if i == j: continue
+        if i == j:
+            continue
         elem = Pair(copy(numbers[i]), copy(numbers[j]))
         reduce(elem)
         results.append(magnitude(elem))

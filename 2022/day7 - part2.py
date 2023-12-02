@@ -1,6 +1,5 @@
 from functools import cache
 
-
 file = open("input.txt")
 
 lines = file.read().splitlines()
@@ -24,7 +23,7 @@ for line in lines:
                     cwd.pop()
                 case _:
                     cwd.append(dir)
-    else: # listing
+    else:  # listing
         size, name = line.split()
         if size == "dir":
             size = -1
@@ -45,6 +44,7 @@ def get_size(dir):
             size = get_size(file)
         total_size += size
     return total_size
+
 
 needed_size = 30000000 - (70000000 - get_size("/"))
 fitting_size = []

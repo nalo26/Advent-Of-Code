@@ -1,4 +1,4 @@
-from operator import add, sub, mul, truediv
+from operator import add, mul, sub, truediv
 
 file = open("input.txt")
 lines = file.read().splitlines()

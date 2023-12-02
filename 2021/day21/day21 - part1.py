@@ -1,5 +1,6 @@
 file = open("input.txt")
 
+
 class Player:
     def __init__(self, position):
         self.position = position
@@ -23,5 +24,7 @@ while p1.score < 1000 and p2.score < 1000:
     players[index].score += players[index].position
     p_index += 1
 
-if p1.score >= 1000: print(p2.score * dice)
-else: print(p1.score * dice)
+if p1.score >= 1000:
+    print(p2.score * dice)
+else:
+    print(p1.score * dice)

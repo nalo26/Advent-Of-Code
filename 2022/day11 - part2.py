@@ -1,6 +1,5 @@
 from math import prod
 
-
 file = open("input.txt")
 lines = file.read().splitlines()
 

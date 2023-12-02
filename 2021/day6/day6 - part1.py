@@ -9,7 +9,8 @@ for i in range(80):
         if fish == 0:
             newGen.append(6)
             toAdd += 1
-        else: newGen.append(fish-1)
+        else:
+            newGen.append(fish - 1)
     for j in range(toAdd):
         newGen.append(8)
     fishes = newGen.copy()

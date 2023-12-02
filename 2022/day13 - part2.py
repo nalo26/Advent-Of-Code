@@ -12,7 +12,7 @@ def compute_order(left, right):
         return compute_order([left], right)
     if isinstance(left, list) and isinstance(right, int):
         return compute_order(left, [right])
-    
+
     # both list
     for l, r in zip(left, right):
         r = compute_order(l, r)
@@ -25,4 +25,4 @@ packets = sorted(packets, key=functools.cmp_to_key(compute_order))
 for p in packets:
     print(p)
 
-print((packets.index([[2]])+1) * (packets.index([[6]])+1))
+print((packets.index([[2]]) + 1) * (packets.index([[6]]) + 1))
