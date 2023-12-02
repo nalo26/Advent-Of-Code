@@ -1,4 +1,4 @@
-# Year 2022
+# Year 2023
 
 Here are the folder for the whole **2023**'s problems.
 
@@ -7,9 +7,9 @@ Everyting is made with **Python 3**. A lot of programs need at least Python 3.6,
 ## Supported problems
 
 | Day    | Part 1             | Part 2             |
-| ------ | ------------------ | -------------------|
+| ------ | ------------------ | ------------------ |
 | Day 1  | :white_check_mark: | :white_check_mark: |
-| Day 2  | :hourglass:        | :hourglass:        |
+| Day 2  | :white_check_mark: | :white_check_mark: |
 | Day 3  | :hourglass:        | :hourglass:        |
 | Day 4  | :hourglass:        | :hourglass:        |
 | Day 5  | :hourglass:        | :hourglass:        |
