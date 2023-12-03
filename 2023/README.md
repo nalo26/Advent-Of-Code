@@ -1,5 +1,7 @@
 # Year 2023
 
+https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
+
 Here are the folder for the whole **2023**'s problems.
 
 Everyting is made with **Python 3**. A lot of programs need at least Python 3.6, but for some, you'll need Python 3.10.
@@ -10,7 +12,7 @@ Everyting is made with **Python 3**. A lot of programs need at least Python 3.6,
 | ------ | ------------------ | ------------------ |
 | Day 1  | :white_check_mark: | :white_check_mark: |
 | Day 2  | :white_check_mark: | :white_check_mark: |
-| Day 3  | :hourglass:        | :hourglass:        |
+| Day 3  | :white_check_mark: | :white_check_mark: |
 | Day 4  | :hourglass:        | :hourglass:        |
 | Day 5  | :hourglass:        | :hourglass:        |
 | Day 6  | :hourglass:        | :hourglass:        |
