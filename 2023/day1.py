@@ -28,9 +28,7 @@ def part2():
     num_re = re.compile(r"\d|" + r"|".join(numbers.keys()))
     _sum = 0
     for instruction in lines:
-        nums = num_re.findall(
-            instruction, overlapped=True
-        )  # overlapped is the key (eighthree = 83)
+        nums = num_re.findall(instruction, overlapped=True)  # overlapped is the key (eighthree = 83)
         _sum += int(numbers.get(nums[0], nums[0]) + numbers.get(nums[-1], nums[-1]))
     return _sum
 

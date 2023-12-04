@@ -41,6 +41,6 @@ def part2():
     return len(new_lines)
 
 
-print("Part 1:", part1(lines))
+print("Part 1:", part1())
 print("Part 2:", part2())
 file.close()
