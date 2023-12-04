@@ -1,11 +1,11 @@
 import re
 
 file = open("input.txt")
-lines = file.readlines()
+default_lines = file.readlines()
 
 SYMBOLS = {"#", "*", "$", "/", "+", "=", "%", "-", "@", "&"}
-WIDTH = len(lines[0])
-HEIGHT = len(lines)
+WIDTH = len(default_lines[0])
+HEIGHT = len(default_lines)
 CARDS = [(-1, -1), (-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1)]
 
 
@@ -48,6 +48,8 @@ def part2():
     return _sum
 
 
+lines = default_lines.copy()
 print("Part 1:", part1())
+lines = default_lines.copy()
 print("Part 2:", part2())
 file.close()
