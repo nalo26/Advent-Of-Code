@@ -17,15 +17,15 @@ def part1():
     _sum = 0
     for line in lines:
         _, winning, ours = parse(line)
-        inter = winning.intersection(ours)
-        _sum += pow(2, len(inter) - 1) if inter else 0
+        inter = winning & ours
+        _sum += 2 ** (len(inter) - 1) if inter else 0
     return _sum
 
 
 @lru_cache(maxsize=None)
 def depth_card(i, line):
     _, winning, ours = parse(line)
-    dup = len(winning.intersection(ours))
+    dup = len(winning & ours)
     res = []
     for j in range(dup):
         index = i + j + 1
