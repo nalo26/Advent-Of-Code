@@ -14,7 +14,7 @@ Everyting is made with **Python 3**. A lot of programs need at least Python 3.6,
 | Day 2  | :white_check_mark: | :white_check_mark: |
 | Day 3  | :white_check_mark: | :white_check_mark: |
 | Day 4  | :white_check_mark: | :white_check_mark: |
-| Day 5  | :hourglass:        | :hourglass:        |
+| Day 5  | :white_check_mark: | :white_check_mark: |
 | Day 6  | :hourglass:        | :hourglass:        |
 | Day 7  | :hourglass:        | :hourglass:        |
 | Day 8  | :hourglass:        | :hourglass:        |
