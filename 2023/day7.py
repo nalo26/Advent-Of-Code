@@ -41,7 +41,7 @@ def compare_hands(hand1, hand2, cards):
     return 0
 
 
-def calculate(CARDS, joker=False):
+def calculate(cards, joker=False):
     strenghts = defaultdict(list)
     for line in lines:
         hand, bid = line.split()
@@ -56,7 +56,7 @@ def calculate(CARDS, joker=False):
         local_ordened_hands = []
         for hand, bid in hands:
             for j in range(len(local_ordened_hands)):
-                if compare_hands(hand, local_ordened_hands[j][0], CARDS) == 1:
+                if compare_hands(hand, local_ordened_hands[j][0], cards) == 1:
                     local_ordened_hands.insert(j, (hand, bid))
                     break
             else:
@@ -70,13 +70,13 @@ def calculate(CARDS, joker=False):
 
 
 def part1():
-    CARDS = "23456789TJQKA"
-    return calculate(CARDS)
+    cards = "23456789TJQKA"
+    return calculate(cards)
 
 
 def part2():
-    CARDS = "J23456789TQKA"
-    return calculate(CARDS, True)
+    cards = "J23456789TQKA"
+    return calculate(cards, True)
 
 
 print("Part 1:", part1())
