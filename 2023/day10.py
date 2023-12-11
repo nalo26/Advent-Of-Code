@@ -25,7 +25,8 @@ def get_start():
 
 
 def go_through(pos, direction):
-    path = [pos]
+    path = set()
+    path.add(pos)
     while True:
         match lines[pos[0]][pos[1]]:
             case "L":
@@ -47,7 +48,7 @@ def go_through(pos, direction):
             case "right":
                 pos = (pos[0], pos[1] + 1)
 
-        path.append((pos[0], pos[1]))
+        path.add((pos[0], pos[1]))
         if lines[pos[0]][pos[1]] == "S":
             return path
 
@@ -56,23 +57,24 @@ def part1():
     pos, direction = get_start()
     path = go_through(pos, direction)
 
-    return len(path) // 2 + 1
+    return len(path) // 2
 
 
 def part2():
     pos, direction = get_start()
     path = go_through(pos, direction)
-    rep = dict(zip("-|F7LJS", "─│┌┐└┘┼"))
 
+    count = 0
+    north_char = {"L", "J", "|"}
     for i, line in enumerate(lines):
+        is_inside = False
         for j, char in enumerate(line):
             if (i, j) in path:
-                # print(rep.get(char), end="")
-                print("█", end="")
+                if char in north_char:
+                    is_inside = not is_inside
             else:
-                print(" ", end="")
-        print()
-    return "See day10p2.png"
+                count += 1 if is_inside else 0
+    return count
 
 
 print("Part 1:", part1())
