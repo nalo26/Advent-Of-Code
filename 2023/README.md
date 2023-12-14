@@ -19,11 +19,11 @@ Everyting is made with **Python 3**. A lot of programs need at least Python 3.6,
 | Day 7  | :white_check_mark: | :white_check_mark: |
 | Day 8  | :white_check_mark: | :white_check_mark: |
 | Day 9  | :white_check_mark: | :white_check_mark: |
-| Day 10 | :hourglass:        | :hourglass:        |
-| Day 11 | :hourglass:        | :hourglass:        |
-| Day 12 | :hourglass:        | :hourglass:        |
-| Day 13 | :hourglass:        | :hourglass:        |
-| Day 14 | :hourglass:        | :hourglass:        |
+| Day 10 | :white_check_mark: | :white_check_mark: |
+| Day 11 | :white_check_mark: | :white_check_mark: |
+| Day 12 | :white_check_mark: | :hourglass:        |
+| Day 13 | :white_check_mark: | :white_check_mark: |
+| Day 14 | :white_check_mark: | :white_check_mark: |
 | Day 15 | :hourglass:        | :hourglass:        |
 | Day 16 | :hourglass:        | :hourglass:        |
 | Day 17 | :hourglass:        | :hourglass:        |
