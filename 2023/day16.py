@@ -1,4 +1,4 @@
-file = open(r"D:\OneDrive\Dev\Advent-Of-Code\2023\input.txt")
+file = open("input.txt")
 layout = [line.strip() for line in file.readlines()]
 
 WIDTH, HEIGHT = len(layout[0]), len(layout)
