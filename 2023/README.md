@@ -27,7 +27,7 @@ Everyting is made with **Python 3**. A lot of programs need at least Python 3.6,
 | Day 15 | :white_check_mark: | :white_check_mark: |
 | Day 16 | :white_check_mark: | :white_check_mark: |
 | Day 17 | :x:                | :x:                |
-| Day 18 | :white_check_mark: | :x:                |
+| Day 18 | :white_check_mark: | :white_check_mark: |
 | Day 19 | :white_check_mark: | :x:                |
 | Day 20 | :white_check_mark: | :x:                |
 | Day 21 | :white_check_mark: | :x:                |
