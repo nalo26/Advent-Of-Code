@@ -1,58 +1,72 @@
-from tqdm import tqdm
+# Credits for the recursive logic:
+# https://www.reddit.com/r/adventofcode/comments/18hbbxe/2023_day_12python_stepbystep_tutorial_with_bonus/
+
+from functools import cache
 
 file = open("input.txt")
 lines = file.readlines()
 
 
-def match(field, qte):
-    in_group = False
-    new_qte = []
-    count = 0
-    for elem in field:
-        if elem == "#" and not in_group:
-            in_group = True
-        if elem == "#":
-            count += 1
-        if elem == "." and in_group:
-            in_group = False
-            new_qte.append(count)
-            count = 0
-    if in_group:
-        new_qte.append(count)
-    return new_qte == qte
+def can_fit(fields, groups):
+    group = groups[0]
+    field_group = fields[:group].replace("?", "#")
+    if "." in field_group or len(field_group) != group:
+        return 0
+
+    if len(fields) == group:
+        # We're on the last group of field
+        if len(groups) == 1:
+            return 1
+        return 0
+
+    if fields[group] in "?.":
+        # if the next group is not the same as this one
+        return calc(fields[group + 1 :], groups[1:])
+
+    return 0
+
+
+@cache
+def calc(fields, groups):
+    if not groups:
+        if "#" in fields:
+            return 0  # Damaged field left that can't fit in groups
+        return 1  # All fields filled
+
+    if not fields:
+        return 0  # Can't fit all groups in field
+
+    spring = fields[0]
+    rest = fields[1:]
+
+    match spring:
+        case "#":
+            return can_fit(fields, groups)
+        case ".":
+            return calc(rest, groups)
+        case "?":
+            return calc("." + rest, groups) + calc("#" + rest, groups)
 
 
 def part1():
     count = 0
-    for line in tqdm(lines):
-        field, qte = line.split(" ")
-        qte = list(map(int, qte.split(",")))
-        unknown = [i for i, elem in enumerate(field) if elem == "?"]
-        target = 2 ** len(unknown)
-        for b in range(target):
-            for i, pos in enumerate(unknown):
-                field = field[:pos] + ("#" if ((b >> i) & 1) else ".") + field[pos + 1 :]
-            if match(field, qte):
-                count += 1
+    for line in lines:
+        fields, groups = line.split(" ")
+        groups = tuple(map(int, groups.split(",")))
+        count += calc(fields, groups)
     return count
 
 
-def part2():  # too slow!
+def part2():
     count = 0
-    for line in tqdm(lines):
-        field, qte = line.split(" ")
-        field = "?".join([field] * 5)
-        qte = list(map(int, qte.split(","))) * 5
-        unknown = [i for i, elem in enumerate(field) if elem == "?"]
-        target = 2 ** len(unknown)
-        for b in tqdm(range(target)):
-            for i, pos in enumerate(unknown):
-                field = field[:pos] + ("#" if ((b >> i) & 1) else ".") + field[pos + 1 :]
-            if match(field, qte):
-                count += 1
+    for line in lines:
+        fields, groups = line.split(" ")
+        fields = "?".join([fields] * 5)
+        groups = tuple(map(int, groups.split(","))) * 5
+        count += calc(fields, groups)
     return count
 
 
-# print("Part 1:", part1())
+print("Part 1:", part1())
 print("Part 2:", part2())
 file.close()
