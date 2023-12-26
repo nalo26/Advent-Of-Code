@@ -1,3 +1,7 @@
 .vscode
-2023/input.txt
-2023/base.py
+*/**/input.txt
+*/**/base.py
+.venv
+.aoc_tiles/*
+!.aoc_tiles/tiles/
+session.cookie
