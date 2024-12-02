@@ -1,4 +1,4 @@
-file = open(r"C:\Users\Epulapp\OneDrive\Dev\Advent-Of-Code\2023\input.txt")
+file = open("input.txt")
 lines = file.read().splitlines()
 
 

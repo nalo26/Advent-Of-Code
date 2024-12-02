@@ -1,7 +1,7 @@
 import re
 from collections import defaultdict
 
-file = open(r"C:\Users\Epulapp\OneDrive\Dev\Advent-Of-Code\2023\input.txt")
+file = open("input.txt")
 instructions_list, parts = file.read().split("\n\n")
 instructions_list = instructions_list.splitlines()
 parts = parts.splitlines()
