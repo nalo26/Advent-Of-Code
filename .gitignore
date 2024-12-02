@@ -1,7 +1,11 @@
-.vscode
+.vscode/
+.venv/
+*/**/__pycache__/
 */**/input.txt
 */**/base.py
-.venv
+*.xlsx
+
+# AOC tiles
 .aoc_tiles/*
 !.aoc_tiles/tiles/
 session.cookie
