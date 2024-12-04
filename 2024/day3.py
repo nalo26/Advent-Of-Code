@@ -15,10 +15,9 @@ def part1():
 
 def part2():
     res = 0
-    # adding a do() at the start to make the first split work
-    for does in ("do()" + lines).split("don't()"):
+    for donts in lines.split("do()"):
         # ignore disable instruction parts, keeping only the do() parts
-        instr = "".join(does.split("do()")[1:])
+        instr = donts.split("don't()")[0]
         for find in re.findall(regex, instr):
             res += int(find[0]) * int(find[1])
     return res
