@@ -1,30 +1,23 @@
-file = open("input.txt")
-lines = file.read().splitlines()
-lines = [list(line) for line in lines]
+from lib.consts import DIR_CROSS
+from lib.input import get_input
+from lib.map import Map
 
-for y, line in enumerate(lines):
-    if "^" in line:
-        start_pos = (line.index("^"), y)
-
-CARDS = [(0, -1), (1, 0), (0, 1), (-1, 0)]  # UP, RIGHT, DOWN, LEFT
+map = Map(get_input(2024, 6))
+start_pos = map.find("^")
 
 
-def try_route(map: list[list[str]]) -> set[tuple[int, int]]:
+def try_route(map: Map) -> set[tuple[int, int]]:
     card_i = 0  # starting looking up
     pos = start_pos
     visited = {(pos, card_i)}
     while True:
-        while (
-            0 <= pos[1] + CARDS[card_i][1] < len(map)
-            and 0 <= pos[0] + CARDS[card_i][0] < len(map[0])
-            and map[pos[1] + CARDS[card_i][1]][pos[0] + CARDS[card_i][0]] != "#"
-        ):
-            pos = (pos[0] + CARDS[card_i][0], pos[1] + CARDS[card_i][1])
+        while map.is_in_bounds(pos + DIR_CROSS[card_i]) and map[pos + DIR_CROSS[card_i]] != "#":
+            pos += DIR_CROSS[card_i]
             if (pos, card_i) in visited:  # we've been here before
                 return None
             visited.add((pos, card_i))
 
-        if not (0 <= pos[1] + CARDS[card_i][1] < len(map) and 0 <= pos[0] + CARDS[card_i][0] < len(map[0])):
+        if not map.is_in_bounds(pos + DIR_CROSS[card_i]):
             # next step is out of bounds, end of algorithm
             break
         card_i = (card_i + 1) % 4
@@ -36,22 +29,17 @@ to_test = set()
 
 
 def part1():
-    visited = try_route(lines)
+    visited = try_route(map)
     for pos, _ in visited:
         to_test.add(pos)
-    return len(visited)
+    return len(to_test)
 
 
 def part2():
     res = 0
     for x, y in to_test:
-        new_map = [line.copy() for line in lines]
-        new_map[y][x] = "#"
+        new_map = map.copy()
+        new_map[x, y] = "#"
         if try_route(new_map) is None:
             res += 1
     return res
-
-
-print("Part 1:", part1())
-print("Part 2:", part2())
-file.close()

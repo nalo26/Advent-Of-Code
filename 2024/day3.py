@@ -1,8 +1,8 @@
 import re
 
-file = open("input.txt")
-lines = file.read()
+from lib.input import get_input
 
+lines = get_input(2024, 3)
 regex = re.compile(r"mul\((\d{1,3}),(\d{1,3})\)")
 
 
@@ -21,8 +21,3 @@ def part2():
         for find in re.findall(regex, instr):
             res += int(find[0]) * int(find[1])
     return res
-
-
-print("Part 1:", part1())
-print("Part 2:", part2())
-file.close()

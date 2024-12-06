@@ -1,7 +1,8 @@
 import networkx as nx
 
-file = open("input.txt")
-lines = file.read().split("\n\n")
+from lib.input import get_input
+
+lines = get_input(2024, 5).split("\n\n")
 
 rules = [tuple(map(int, line.split("|"))) for line in lines[0].splitlines()]
 updates = [list(map(int, line.split(","))) for line in lines[1].splitlines()]
@@ -33,8 +34,3 @@ def part2():
         sorted_updates = list(nx.topological_sort(graph))
         res += sorted_updates[len(sorted_updates) // 2]
     return res
-
-
-print("Part 1:", part1())
-print("Part 2:", part2())
-file.close()

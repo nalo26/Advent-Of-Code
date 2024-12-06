@@ -1,5 +1,6 @@
-file = open("input.txt")
-lines = file.read().splitlines()
+from lib.input import get_input
+
+lines = get_input(2024, 2).splitlines()
 
 
 def check_valid(report):
@@ -39,8 +40,3 @@ def part2():
                 break
 
     return res
-
-
-print("Part 1:", part1())
-print("Part 2:", part2())
-file.close()
