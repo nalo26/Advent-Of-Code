@@ -1,6 +1,19 @@
+from tqdm import tqdm
+
 from lib.input import get_input
 
 diskmap = list(map(int, list(get_input(2024, 9).splitlines()[0])))
+
+
+def find_first_diff_data(values, data):
+    try:
+        return next(idx for idx, value in enumerate(values) if value != data)
+    except StopIteration:
+        return None
+
+
+def consecutives(values, index):
+    return find_first_diff_data(values[index:], values[index]) or len(values) - index
 
 
 class Disk:
@@ -10,58 +23,42 @@ class Disk:
 
     def uncompress(self, diskmap: list[int]) -> list[int]:
         memory = []
-        id = 1
+        id = 0
         for i, c in enumerate(diskmap):
             if i % 2 == 0:  # file
                 memory.extend([id] * c)
                 self.data_length += c
                 id += 1
             else:  # free space
-                memory.extend([0] * c)
+                memory.extend([None] * c)
         return memory
 
     def fragment(self):
-        while (pt_null := self.memory.index(0)) < self.data_length:
-            pt_move = len(self.memory) - self._find_first_diff_data(reversed(self.memory), 0) - 1
-            self.memory[pt_null] = self.memory[pt_move]
-            self.memory[pt_move] = 0
+        while (pt_null := self.memory.index(None)) < self.data_length:
+            pt_data = len(self.memory) - find_first_diff_data(reversed(self.memory), None) - 1
+            self.memory[pt_null] = self.memory[pt_data]
+            self.memory[pt_data] = None
 
     def fragment_block(self):
-        max_val = max(self.memory)
-        for val in range(max_val, 0, -1):
-            pt_move = self.memory.index(val)
-            data_size = self._consecutives(pt_move)
+        for val in tqdm(range(self.memory[-1], -1, -1)):
+            pt_data = self.memory.index(val)
+            data_size = consecutives(self.memory, pt_data)
             pt_null, null_size = 0, 0
             try:
                 while True:  # search for big enough free space
-                    pt_null = self.memory.index(0, pt_null + null_size)
-                    if pt_null > pt_move:
+                    pt_null = self.memory.index(None, pt_null + null_size)
+                    if pt_null > pt_data:
                         raise ValueError
-                    null_size = self._consecutives(pt_null)
+                    null_size = consecutives(self.memory, pt_null)
                     if null_size >= data_size:
                         break
             except ValueError:  # not enough free space at better place
                 continue
             self.memory[pt_null : pt_null + data_size] = [val] * data_size
-            self.memory[pt_move : pt_move + data_size] = [0] * data_size
-
-    def _find_first_diff_data(self, values, data):
-        try:
-            return next(idx for idx, value in enumerate(values) if value != data)
-        except StopIteration:
-            return None
-
-    def _consecutives(self, index):
-        return self._find_first_diff_data(self.memory[index:], self.memory[index]) or len(self.memory) - index
+            self.memory[pt_data : pt_data + data_size] = [None] * data_size
 
     def checksum(self):
-        return sum(i * (c - 1) for i, c in enumerate(self.memory) if c != 0)
-
-    def __str__(self):
-        def compute(data):
-            return str(data - 1) if data != 0 else "."
-
-        return "".join(map(compute, self.memory))
+        return sum(i * c for i, c in enumerate(self.memory) if c is not None)
 
 
 def part1():
