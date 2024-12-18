@@ -72,11 +72,20 @@ class Map[T]:
     def find_all(self, value: T) -> list[Position]:
         return [Position(x, y) for y, row in enumerate(self.grid) for x, cell in enumerate(row) if cell == value]
 
+    def rotate(self) -> "Map":
+        # rotate 90 degrees clockwise
+        return Map([row for row in zip(*self.grid[::-1])])
+
     def __str__(self) -> str:
         return "\n".join("".join(row) for row in self.grid)
 
     def __repr__(self) -> str:
         return f"Map({self.grid})"
+
+    def __iter__(self):
+        for y, row in enumerate(self.grid):
+            for x, cell in enumerate(row):
+                yield Position(x, y), cell
 
     @property
     def height(self) -> int:
