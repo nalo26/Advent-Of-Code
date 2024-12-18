@@ -2,8 +2,7 @@ from lib.consts import DIR_CROSS
 from lib.input import get_input
 from lib.map import Map
 
-# map = Map([list(line) for line in get_input(2024, 12).splitlines()])
-map = Map([list(line) for line in get_input(True).splitlines()])
+map = Map([list(line) for line in get_input(2024, 12).splitlines()])
 
 
 def evaluate_region(pos, val, visited=None):

@@ -6,7 +6,6 @@ WIDTH = 71
 HEIGHT = 71
 
 lines = get_input(2024, 18).splitlines()
-# lines = get_input(True).splitlines()
 bugs = [Position(*tuple(map(int, line.split(",")))) for line in lines]
 
 
