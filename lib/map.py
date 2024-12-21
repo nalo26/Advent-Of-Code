@@ -19,6 +19,11 @@ class Position:
     def __iter__(self):
         return iter((self.x, self.y))
 
+    def dist(self, other: "Position" | Tuple[int, int]) -> int:
+        if isinstance(other, Position):
+            return abs(self.x - other.x) + abs(self.y - other.y)
+        return abs(self.x - other[0]) + abs(self.y - other[1])
+
     def __repr__(self) -> str:
         return f"Position({self.x}, {self.y})"
 
