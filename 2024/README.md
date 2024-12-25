@@ -1,8 +1,10 @@
-# Year 2023
+# Year 2024
 
-Here are the folder for the whole **2023**'s problems.
+Here are the folder for the whole **2024**'s problems.
 
-Everyting is made with **Python 3**. A lot of programs need at least Python 3.6, but for some, you'll need Python 3.10.
+Everyting is made with **Python 3**. You'll need Python 3.12 to use a lot of features.
+
+This was the first time I built my own utility library! It will be used and upgraded in the following years as well.
 
 ## Progression
 
@@ -24,12 +26,12 @@ Everyting is made with **Python 3**. A lot of programs need at least Python 3.6,
 | Day 14 | :heavy_check_mark: | :heavy_check_mark: |
 | Day 15 | :heavy_check_mark: | :heavy_check_mark: |
 | Day 16 | :heavy_check_mark: | :heavy_check_mark: |
-| Day 17 | :x:                | :x:                |
+| Day 17 | :heavy_check_mark: | :heavy_check_mark: |
 | Day 18 | :heavy_check_mark: | :heavy_check_mark: |
-| Day 19 | :heavy_check_mark: | :x:                |
-| Day 20 | :heavy_check_mark: | :x:                |
-| Day 21 | :heavy_check_mark: | :x:                |
-| Day 22 | :x:                | :x:                |
-| Day 23 | :heavy_check_mark: | :x:                |
-| Day 24 | :heavy_check_mark: | :x:                |
+| Day 19 | :heavy_check_mark: | :heavy_check_mark: |
+| Day 20 | :heavy_check_mark: | :heavy_check_mark: |
+| Day 21 | :x:                | :x:                |
+| Day 22 | :heavy_check_mark: | :heavy_check_mark: |
+| Day 23 | :heavy_check_mark: | :heavy_check_mark: |
+| Day 24 | :heavy_check_mark: | :heavy_check_mark: |
 | Day 25 | :heavy_check_mark: | :x:                |

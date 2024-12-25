@@ -6,7 +6,88 @@ It will be public at any time of the year, except from the 1st to the 25th of de
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
-  2023 - 40 ⭐
+  Advent of Code - 214/500 ⭐
+</h1>
+<h1 align="center">
+  2024 - 47 ⭐ - Python
+</h1>
+<a href="2024/day1.py">
+  <img src=".aoc_tiles/tiles/2024/01.png" width="161px">
+</a>
+<a href="2024/day2.py">
+  <img src=".aoc_tiles/tiles/2024/02.png" width="161px">
+</a>
+<a href="2024/day3.py">
+  <img src=".aoc_tiles/tiles/2024/03.png" width="161px">
+</a>
+<a href="2024/day4.py">
+  <img src=".aoc_tiles/tiles/2024/04.png" width="161px">
+</a>
+<a href="2024/day5.py">
+  <img src=".aoc_tiles/tiles/2024/05.png" width="161px">
+</a>
+<a href="2024/day6.py">
+  <img src=".aoc_tiles/tiles/2024/06.png" width="161px">
+</a>
+<a href="2024/day7.py">
+  <img src=".aoc_tiles/tiles/2024/07.png" width="161px">
+</a>
+<a href="2024/day8.py">
+  <img src=".aoc_tiles/tiles/2024/08.png" width="161px">
+</a>
+<a href="2024/day9.py">
+  <img src=".aoc_tiles/tiles/2024/09.png" width="161px">
+</a>
+<a href="2024/day10.py">
+  <img src=".aoc_tiles/tiles/2024/10.png" width="161px">
+</a>
+<a href="2024/day11.py">
+  <img src=".aoc_tiles/tiles/2024/11.png" width="161px">
+</a>
+<a href="2024/day12.py">
+  <img src=".aoc_tiles/tiles/2024/12.png" width="161px">
+</a>
+<a href="2024/day13.py">
+  <img src=".aoc_tiles/tiles/2024/13.png" width="161px">
+</a>
+<a href="2024/day14.py">
+  <img src=".aoc_tiles/tiles/2024/14.png" width="161px">
+</a>
+<a href="2024/day15.py">
+  <img src=".aoc_tiles/tiles/2024/15.png" width="161px">
+</a>
+<a href="2024/day16.py">
+  <img src=".aoc_tiles/tiles/2024/16.png" width="161px">
+</a>
+<a href="2024/day17.py">
+  <img src=".aoc_tiles/tiles/2024/17.png" width="161px">
+</a>
+<a href="2024/day18.py">
+  <img src=".aoc_tiles/tiles/2024/18.png" width="161px">
+</a>
+<a href="2024/day19.py">
+  <img src=".aoc_tiles/tiles/2024/19.png" width="161px">
+</a>
+<a href="2024/day20.py">
+  <img src=".aoc_tiles/tiles/2024/20.png" width="161px">
+</a>
+<a href="None">
+  <img src=".aoc_tiles/tiles/2024/21.png" width="161px">
+</a>
+<a href="2024/day22.py">
+  <img src=".aoc_tiles/tiles/2024/22.png" width="161px">
+</a>
+<a href="2024/day23.py">
+  <img src=".aoc_tiles/tiles/2024/23.png" width="161px">
+</a>
+<a href="2024/day24.py">
+  <img src=".aoc_tiles/tiles/2024/24.png" width="161px">
+</a>
+<a href="2024/day25.py">
+  <img src=".aoc_tiles/tiles/2024/25.png" width="161px">
+</a>
+<h1 align="center">
+  2023 - 40 ⭐ - Python
 </h1>
 <a href="2023/day1.py">
   <img src=".aoc_tiles/tiles/2023/01.png" width="161px">
@@ -84,7 +165,7 @@ It will be public at any time of the year, except from the 1st to the 25th of de
   <img src=".aoc_tiles/tiles/2023/25.png" width="161px">
 </a>
 <h1 align="center">
-  2022 - 45 ⭐
+  2022 - 45 ⭐ - Python
 </h1>
 <a href="2022/day1 - part1.py">
   <img src=".aoc_tiles/tiles/2022/01.png" width="161px">
@@ -162,7 +243,7 @@ It will be public at any time of the year, except from the 1st to the 25th of de
   <img src=".aoc_tiles/tiles/2022/25.png" width="161px">
 </a>
 <h1 align="center">
-  2021 - 42 ⭐
+  2021 - 42 ⭐ - Python
 </h1>
 <a href="2021/day1/day1 - part1.py">
   <img src=".aoc_tiles/tiles/2021/01.png" width="161px">
@@ -240,7 +321,7 @@ It will be public at any time of the year, except from the 1st to the 25th of de
   <img src=".aoc_tiles/tiles/2021/25.png" width="161px">
 </a>
 <h1 align="center">
-  2020 - 28 ⭐
+  2020 - 28 ⭐ - Python
 </h1>
 <a href="2020/day1/day1 - part1.py">
   <img src=".aoc_tiles/tiles/2020/01.png" width="161px">
@@ -291,7 +372,7 @@ It will be public at any time of the year, except from the 1st to the 25th of de
   <img src=".aoc_tiles/tiles/2020/16.png" width="161px">
 </a>
 <h1 align="center">
-  2015 - 12 ⭐
+  2015 - 12 ⭐ - Python
 </h1>
 <a href="2015/day1/day1 - part1.py">
   <img src=".aoc_tiles/tiles/2015/01.png" width="161px">
