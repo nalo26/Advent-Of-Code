@@ -6,8 +6,7 @@ from lib.input import get_input
 OPERATORS = {"AND": and_, "OR": or_, "XOR": xor}
 
 
-# lines = get_input(2024, 24).split("\n\n")
-lines = get_input(True).split("\n\n")
+lines = get_input(2024, 24).split("\n\n")
 
 reg = {}
 for line in lines[0].splitlines():
@@ -38,5 +37,5 @@ def part1():
 
 
 def part2():
-    # Found by hand
+    # Found by hand, see day24p2.txt
     pass
