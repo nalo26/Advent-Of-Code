@@ -4,6 +4,7 @@ input.txt
 */**/__pycache__/
 */**/base.py
 *.xlsx
+test.*
 
 # AOC tiles
 .aoc_tiles/*
