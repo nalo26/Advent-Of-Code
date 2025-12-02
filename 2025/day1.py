@@ -2,7 +2,7 @@ from collections import deque
 
 from lib.input import get_input
 
-lines = get_input(2025, None).splitlines()
+lines = get_input(2025, 1).splitlines()
 
 
 def part1():
