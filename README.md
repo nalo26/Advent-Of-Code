@@ -6,10 +6,10 @@ It will be public at any time of the year, except from the 1st to the 25th of de
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
-  Advent of Code - 222/508 ⭐
+  Advent of Code - 224/510 ⭐
 </h1>
 <h1 align="center">
-  2025 - 8 ⭐ - Python
+  2025 - 10 ⭐ - Python
 </h1>
 <a href="2025/day1.py">
   <img src=".aoc_tiles/tiles/2025/01.png" width="161px">
@@ -22,6 +22,9 @@ It will be public at any time of the year, except from the 1st to the 25th of de
 </a>
 <a href="2025/day4.py">
   <img src=".aoc_tiles/tiles/2025/04.png" width="161px">
+</a>
+<a href="2025/day5.py">
+  <img src=".aoc_tiles/tiles/2025/05.png" width="161px">
 </a>
 <h1 align="center">
   2024 - 47 ⭐ - Python
