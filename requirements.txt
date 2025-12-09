@@ -1,5 +1,6 @@
+pre-commit
 requests
 networkx
 numpy>=2.2.0
 scipy>=1.14.1
-pre-commit
+shapely
