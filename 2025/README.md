@@ -11,14 +11,14 @@ Starting this year and futures one, there will only be [12 challenges](https://a
 | Day    | Part 1             | Part 2             |
 | ------ | ------------------ | ------------------ |
 | Day 1  | :heavy_check_mark: | :heavy_check_mark: |
-| Day 2  | :clock10:          | :clock10:          |
-| Day 3  | :clock10:          | :clock10:          |
-| Day 4  | :clock10:          | :clock10:          |
-| Day 5  | :clock10:          | :clock10:          |
-| Day 6  | :clock10:          | :clock10:          |
-| Day 7  | :clock10:          | :clock10:          |
-| Day 8  | :clock10:          | :clock10:          |
-| Day 9  | :clock10:          | :clock10:          |
-| Day 10 | :clock10:          | :clock10:          |
-| Day 11 | :clock10:          | :clock10:          |
-| Day 12 | :clock10:          | :clock10:          |
+| Day 2  | :heavy_check_mark: | :heavy_check_mark: |
+| Day 3  | :heavy_check_mark: | :heavy_check_mark: |
+| Day 4  | :heavy_check_mark: | :heavy_check_mark: |
+| Day 5  | :heavy_check_mark: | :heavy_check_mark: |
+| Day 6  | :heavy_check_mark: | :heavy_check_mark: |
+| Day 7  | :heavy_check_mark: | :heavy_check_mark: |
+| Day 8  | :heavy_check_mark: | :heavy_check_mark: |
+| Day 9  | :heavy_check_mark: | :heavy_check_mark: |
+| Day 10 | :heavy_check_mark: | :heavy_check_mark: |
+| Day 11 | :heavy_check_mark: | :heavy_check_mark: |
+| Day 12 | :heavy_check_mark: | :heavy_check_mark: |
